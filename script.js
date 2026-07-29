@@ -1,65 +1,86 @@
-// ===== FILTER GALLERY (hanya aktif di halaman gallery.html) =====
-const tabs = document.querySelectorAll('.tab');
-const galleryItems = document.querySelectorAll('.gallery-item');
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Playlist - My ARMY Space</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-if (tabs.length > 0) {
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Tandai tab yang aktif
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🎤</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">News</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
 
-      const filter = tab.dataset.filter;
+  <main class="container">
 
-      // Tampilkan/sembunyikan item sesuai kategori
-      galleryItems.forEach(item => {
-        if (filter === 'all' || item.dataset.category === filter) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
-    });
-  });
-}
+    <section class="hero">
+      <h1>MY PLAYLIST <span>🎵</span></h1>
+      <p class="subtitle">Favorite tracks & recommendations.</p>
+    </section>
 
-// ===== SLIDER (hanya aktif di halaman index.html) =====
-// Ambil elemen-elemen yang dibutuhkan
-const track = document.getElementById('sliderTrack');
-const slides = document.querySelectorAll('.slide');
-const dotsContainer = document.getElementById('dots');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+    <!-- MUSIC PLAYER -->
+    <section class="music-player">
 
-if (track) {
-  let currentIndex = 0;
+  <div class="player-box">
+    <div class="player-info">
+      <span class="music-icon">🎵</span>
+      <div>
+        <p class="song-title">Boy with lov</p>
+        <p class="song-artist">BTS</p>
+      </div>
+    </div>
+    <audio class="track-audio" src="music/song1.mp4"></audio>
+    <button class="play-btn track-btn">▶</button>
+  </div>
 
-  // Buat dot secara otomatis sesuai jumlah slide
-  slides.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    if (i === 0) dot.classList.add('active');
-    dot.addEventListener('click', () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  });
+  <div class="player-box">
+    <div class="player-info">
+      <span class="music-icon">🎵</span>
+      <div>
+        <p class="song-title">ON</p>
+        <p class="song-artist">BTS</p>
+      </div>
+    </div>
+    <audio class="track-audio" src="music/song2.mp4"></audio>
+    <button class="play-btn track-btn">▶</button>
+  </div>
 
-  const dots = document.querySelectorAll('.dot');
+  <div class="player-box">
+    <div class="player-info">
+      <span class="music-icon">🎵</span>
+      <div>
+        <p class="song-title">FAKE LOVE</p>
+        <p class="song-artist">BTS</p>
+      </div>
+    </div>
+    <audio class="track-audio" src="music/song3.mp4"></audio>
+    <button class="play-btn track-btn">▶</button>
+  </div>
 
-  // Fungsi untuk memindahkan slide ke index tertentu
-  function goToSlide(index) {
-    currentIndex = (index + slides.length) % slides.length;
-    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  <div class="player-box">
+    <div class="player-info">
+      <span class="music-icon">🎵</span>
+      <div>
+        <p class="song-title">Dynamate</p>
+        <p class="song-artist">BTS</p>
+      </div>
+    </div>
+    <audio class="track-audio" src="music/song4.mp4"></audio>
+    <button class="play-btn track-btn">▶</button>
+  </div>
 
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentIndex].classList.add('active');
-  }
+</section>
 
-  // Tombol panah kanan & kiri
-  nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-  prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+  </main>
 
-  // Auto slide setiap 4 detik
-  setInterval(() => {
-    goToSlide(currentIndex + 1);
-  }, 4000);
-}
+  <script src="script.js"></script>
+</body>
+</html>
