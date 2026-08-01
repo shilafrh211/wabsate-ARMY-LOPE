@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BT21 Collects - My ARMY Space</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🎤</div>
+    <nav class="nav-links">
+  <a href="index.html">🏠 Home</a>
+  <a href="about.html">💜 About</a>
+  <a href="#">📰 News</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+</nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>BT21 COLLECTS <span>🐨</span></h1>
+      <p class="subtitle">Klik karakter buat lihat galeri fotonya.</p>
+    </section>
+
+    <section class="bt21-section">
+      <div class="bt21-grid">
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="van">
+          <img src="images/pro1.jpeg" class="bt21-icon">
+          <p class="bt21-name">VAN</p>
+          <p class="bt21-owner">Protector of ARMY</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="koya">
+          <img src="images/pro2.jpeg" class="bt21-icon">
+          <p class="bt21-name">KOYA</p>
+          <p class="bt21-owner">by RM</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="rj">
+          <img src="images/pro3.jpeg" class="bt21-icon">
+          <p class="bt21-name">RJ</p>
+          <p class="bt21-owner">by Jin</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="shooky">
+          <img src="images/pro4.jpeg" class="bt21-icon">
+          <p class="bt21-name">SHOOKY</p>
+          <p class="bt21-owner">by Suga</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="mang">
+          <img src="images/pro5.jpeg" class="bt21-icon">
+          <p class="bt21-name">MANG</p>
+          <p class="bt21-owner">by J-Hope</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="chimmy">
+          <img src="images/pro6.jpeg" class="bt21-icon">
+          <p class="bt21-name">CHIMMY</p>
+          <p class="bt21-owner">by Jimin</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="tata">
+          <img src="images/pro7.jpeg" class="bt21-icon">
+          <p class="bt21-name">TATA</p>
+          <p class="bt21-owner">by V</p>
+        </a>
+
+        <a href="https://www.instagram.com/bt21stcentury/" target="_blank" class="bt21-card" data-character="cooky">
+          <img src="images/pro8.jpeg" class="bt21-icon">
+          <p class="bt21-name">COOKY</p>
+          <p class="bt21-owner">by Jungkook</p>
+        </a>
+
+      </div>
+
+      <p class="bt21-note">Catatan: semua karakter BT21 memakai satu akun Instagram resmi gabungan (@bt21stcentury), belum ada akun terpisah per karakter.</p>
+    </section>
+
+  </main>
+
+  <!-- MODAL GALERI BT21 -->
+  <div id="bt21Modal" class="bt21-modal">
+    <div class="bt21-modal-content">
+      <button id="bt21ModalClose" class="bt21-modal-close">✕</button>
+      <h3 id="bt21ModalName"></h3>
+      <div id="bt21ModalGallery" class="bt21-modal-gallery"></div>
+      <a id="bt21ModalIgLink" href="#" target="_blank" class="btn">Follow di Instagram</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
